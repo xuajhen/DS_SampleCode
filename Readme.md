@@ -1,4 +1,4 @@
-### This Repository is my pratice codes for data structures in C.
+# This Repository is my pratice codes for data structures in C.
 
 ## Linked List
 1. Single Linked List : linked_list.c
