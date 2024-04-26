@@ -79,6 +79,7 @@ node *deleteNode(node *root, int target)
             node *temp = root;
             root = root->left;
             free(temp);
+            temp = NULL;
             return root;
         }
         else if (root->left == NULL && root->right)
@@ -86,6 +87,7 @@ node *deleteNode(node *root, int target)
             node *temp = root;
             root = root->right;
             free(temp);
+            temp = NULL;
             return root;
         }
         // case 3 2 children
@@ -213,7 +215,7 @@ int main()
              5            14
           4     6
     */
-
+    /*
     root = insertNode(root, 10);
     insertNode(root, 7);
     insertNode(root, 3);
@@ -241,4 +243,12 @@ int main()
     deleteNode(root, 6);
     printf("Height = %d \n", treeHeight(root));
     // delete function
+    */
+    root = insertNode(root, 5);
+    insertNode(root, 6);
+    insertNode(root, 7);
+    insertNode(root, 3);
+    insertNode(root, 4);
+    insertNode(root, 2);
+    deleteNode(root, 7);
 }
